@@ -1,0 +1,5 @@
+vulcan-sql
+dbt-core
+dbt-athena
+wheel
+setuptools

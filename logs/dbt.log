@@ -1,0 +1,362 @@
+[0m16:23:48.796031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6028c6f9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6027c27e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6027c27e20>]}
+
+
+============================== 16:23:48.801515 | ca89addf-fc2c-47a0-b420-c85bb19503e2 ==============================
+[0m16:23:48.801515 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:23:48.801849 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init demo', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:23:48.805606 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/home/andermartinez/.dbt')}
+[0m16:23:48.805859 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m16:23:48.806573 [debug] [MainThread]: Starter project path: /home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/include/starter_project
+[0m16:23:48.807861 [info ] [MainThread]: 
+Your new dbt project "demo" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:23:48.808126 [info ] [MainThread]: Setting up your profile.
+[0m16:25:02.987125 [error] [MainThread]: Encountered an error:
+
+[0m16:25:02.988783 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m16:25:02.998312 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 74.23637, "process_in_blocks": "64", "process_kernel_time": 0.040715, "process_mem_max_rss": "116120", "process_out_blocks": "240", "process_user_time": 0.880763}
+[0m16:25:02.998916 [debug] [MainThread]: Command `dbt init` failed at 16:25:02.998798 after 74.24 seconds
+[0m16:25:02.999411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6028c6f9a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6026ad66b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6026ad5b40>]}
+[0m16:25:02.999909 [debug] [MainThread]: Flushing usage events
+[0m16:25:03.534726 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:25:07.016917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f695ee83940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f695dedfdf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f695dedfd90>]}
+
+
+============================== 16:25:07.020378 | 27296342-86b0-4742-8260-a6bb6a33c168 ==============================
+[0m16:25:07.020378 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:25:07.020798 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init demo', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:25:07.024993 [info ] [MainThread]: A project called demo already exists here.
+[0m16:25:07.025605 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.04337921, "process_in_blocks": "0", "process_kernel_time": 0.04572, "process_mem_max_rss": "93172", "process_out_blocks": "0", "process_user_time": 0.702839}
+[0m16:25:07.025930 [debug] [MainThread]: Command `dbt init` succeeded at 16:25:07.025866 after 0.04 seconds
+[0m16:25:07.026202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f695ee83940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f695dedc1c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f695dedfdf0>]}
+[0m16:25:07.026473 [debug] [MainThread]: Flushing usage events
+[0m16:25:07.543317 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:25:16.321785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15dcb73940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15dbb18550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15dbb185b0>]}
+
+
+============================== 16:25:16.323557 | da2f96c8-5540-4903-90f9-d90274dab3a2 ==============================
+[0m16:25:16.323557 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:25:16.323889 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init demo', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:25:16.327944 [debug] [MainThread]: Starter project path: /home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/include/starter_project
+[0m16:25:16.329415 [info ] [MainThread]: 
+Your new dbt project "demo" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:25:16.329678 [info ] [MainThread]: Setting up your profile.
+[0m16:25:43.869579 [error] [MainThread]: Encountered an error:
+
+[0m16:25:43.872236 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m16:25:43.874135 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 27.58594, "process_in_blocks": "0", "process_kernel_time": 0.046709, "process_mem_max_rss": "116068", "process_out_blocks": "176", "process_user_time": 0.874374}
+[0m16:25:43.874906 [debug] [MainThread]: Command `dbt init` failed at 16:25:43.874756 after 27.59 seconds
+[0m16:25:43.875413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15dcb73940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15da9d26b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f15da9d1ff0>]}
+[0m16:25:43.875816 [debug] [MainThread]: Flushing usage events
+[0m16:25:44.423626 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:25:50.484873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc362c97910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc361c4fdc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc361c4fd60>]}
+
+
+============================== 16:25:50.488588 | 4c763c5a-f20a-4321-9b4d-6a8684f0a109 ==============================
+[0m16:25:50.488588 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:25:50.489088 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init demo', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:25:50.493070 [debug] [MainThread]: Starter project path: /home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/include/starter_project
+[0m16:25:50.494337 [info ] [MainThread]: 
+Your new dbt project "demo" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:25:50.494589 [info ] [MainThread]: Setting up your profile.
+[0m16:26:00.655313 [error] [MainThread]: Encountered an error:
+
+[0m16:26:00.657251 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m16:26:00.659186 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 10.207975, "process_in_blocks": "0", "process_kernel_time": 0.059719, "process_mem_max_rss": "116256", "process_out_blocks": "80", "process_user_time": 0.844589}
+[0m16:26:00.659848 [debug] [MainThread]: Command `dbt init` failed at 16:26:00.659749 after 10.21 seconds
+[0m16:26:00.660272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc362c97910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc360afa6b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc360af9ff0>]}
+[0m16:26:00.660720 [debug] [MainThread]: Flushing usage events
+[0m16:26:01.141946 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:26:04.192557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd93bd97910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd93ad40550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd93ad405b0>]}
+
+
+============================== 16:26:04.196223 | 148479b1-b57e-4ba7-ba62-3ea00106bb31 ==============================
+[0m16:26:04.196223 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:26:04.196651 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init demo', 'send_anonymous_usage_stats': 'True'}
+[0m16:26:04.200547 [debug] [MainThread]: Starter project path: /home/andermartinez/.conda/envs/schema_evolution_vulcan/lib/python3.10/site-packages/dbt/include/starter_project
+[0m16:26:04.201817 [info ] [MainThread]: 
+Your new dbt project "demo" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:26:04.202085 [info ] [MainThread]: Setting up your profile.
+[0m16:27:02.576556 [info ] [MainThread]: Profile demo written to /home/andermartinez/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:27:02.578389 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 58.41961, "process_in_blocks": "0", "process_kernel_time": 0.065621, "process_mem_max_rss": "115884", "process_out_blocks": "72", "process_user_time": 0.850819}
+[0m16:27:02.578832 [debug] [MainThread]: Command `dbt init` succeeded at 16:27:02.578755 after 58.42 seconds
+[0m16:27:02.579180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd93bd97910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd93ad415a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd93ad41930>]}
+[0m16:27:02.579540 [debug] [MainThread]: Flushing usage events
+[0m16:27:02.973804 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:38:09.185586 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cc4f736d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cc3f1c520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cc3f1c5b0>]}
+
+
+============================== 16:38:09.189902 | ec87a1bd-eb3b-4be1-9559-4f59857609bd ==============================
+[0m16:38:09.189902 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:38:09.190489 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt list', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:38:09.191035 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/andermartinez/Projects/samples/spark_iceberg_schema_evolution_vulcansql/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m16:38:09.191843 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.04080719, "process_in_blocks": "0", "process_kernel_time": 0.048791, "process_mem_max_rss": "92264", "process_out_blocks": "48", "process_user_time": 0.693365}
+[0m16:38:09.192303 [debug] [MainThread]: Command `dbt list` failed at 16:38:09.192219 after 0.04 seconds
+[0m16:38:09.192625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cc4f736d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cc3f1ce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7cc3f1c520>]}
+[0m16:38:09.192985 [debug] [MainThread]: Flushing usage events
+[0m16:38:09.798687 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:35:21.615553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f073c78c250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f073b93e8c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f073b93e860>]}
+
+
+============================== 17:35:21.618812 | 081db5c7-c4d3-4e57-aecc-ad7be1a67798 ==============================
+[0m17:35:21.618812 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:35:21.619311 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:35:21.624025 [info ] [MainThread]: dbt version: 1.9.4
+[0m17:35:21.624306 [info ] [MainThread]: python version: 3.10.17
+[0m17:35:21.624544 [info ] [MainThread]: python path: /home/andermartinez/.conda/envs/schema_evolution_vulcan/bin/python3.10
+[0m17:35:21.624777 [info ] [MainThread]: os info: Linux-6.13.12-200.fc41.x86_64-x86_64-with-glibc2.40
+[0m17:35:21.811681 [info ] [MainThread]: Using profiles dir at /home/andermartinez/.dbt
+[0m17:35:21.812191 [info ] [MainThread]: Using profiles.yml file at /home/andermartinez/.dbt/profiles.yml
+[0m17:35:21.812459 [info ] [MainThread]: Using dbt_project.yml file at /home/andermartinez/Projects/samples/spark_iceberg_schema_evolution_vulcansql/dbt_project.yml
+[0m17:35:21.812795 [info ] [MainThread]: adapter type: athena
+[0m17:35:21.813039 [info ] [MainThread]: adapter version: 1.9.3
+[0m17:35:21.813264 [info ] [MainThread]: Configuration:
+[0m17:35:21.813475 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:35:21.813675 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m17:35:21.813874 [info ] [MainThread]: Required dependencies:
+[0m17:35:21.814101 [debug] [MainThread]: Executing "git --help"
+[0m17:35:21.817855 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:35:21.818387 [debug] [MainThread]: STDERR: "b''"
+[0m17:35:21.818623 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:35:21.818861 [info ] [MainThread]: Connection:
+[0m17:35:21.819119 [info ] [MainThread]:   s3_staging_dir: s3://bd-datawarehouse/customers_db/dbt/results/
+[0m17:35:21.819345 [info ] [MainThread]:   work_group: None
+[0m17:35:21.819560 [info ] [MainThread]:   skip_workgroup_check: False
+[0m17:35:21.819773 [info ] [MainThread]:   region_name: eu-west-1
+[0m17:35:21.819999 [info ] [MainThread]:   database: 216989113396
+[0m17:35:21.820210 [info ] [MainThread]:   schema: dev
+[0m17:35:21.820418 [info ] [MainThread]:   poll_interval: 1.0
+[0m17:35:21.820627 [info ] [MainThread]:   aws_profile_name: None
+[0m17:35:21.820827 [info ] [MainThread]:   aws_access_key_id: None
+[0m17:35:21.821024 [info ] [MainThread]:   endpoint_url: None
+[0m17:35:21.821219 [info ] [MainThread]:   s3_data_dir: s3://bd-datawarehouse/customers_db/dbt/data/
+[0m17:35:21.821409 [info ] [MainThread]:   s3_data_naming: schema_table_unique
+[0m17:35:21.821599 [info ] [MainThread]:   s3_tmp_table_dir: None
+[0m17:35:21.821791 [info ] [MainThread]:   debug_query_state: False
+[0m17:35:21.821987 [info ] [MainThread]:   seed_s3_upload_args: None
+[0m17:35:21.822183 [info ] [MainThread]:   lf_tags_database: None
+[0m17:35:21.822376 [info ] [MainThread]:   spark_work_group: None
+[0m17:35:21.822758 [info ] [MainThread]: Registered adapter: athena=1.9.3
+[0m17:35:21.869151 [debug] [MainThread]: Acquiring new athena connection 'debug'
+[0m17:35:21.869614 [debug] [MainThread]: Using athena connection "debug"
+[0m17:35:21.869863 [debug] [MainThread]: On debug: select 1 as id
+[0m17:35:21.870092 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:35:22.171933 [debug] [MainThread]: dbt.adapters.athena.constants adapter: Athena query ID 5f96ed1a-d440-4afa-8f20-de9e3fc1df97
+[0m17:35:23.473488 [debug] [MainThread]: SQL status: OK -1 in 1.603 seconds
+[0m17:35:23.474907 [debug] [MainThread]: On debug: Close
+[0m17:35:23.475564 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:35:23.476074 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:35:23.476343 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/andermartinez/Projects/samples/spark_iceberg_schema_evolution_vulcansql/dbt_project.yml> not found
+
+[0m17:35:23.477079 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.8975163, "process_in_blocks": "0", "process_kernel_time": 0.083615, "process_mem_max_rss": "137760", "process_out_blocks": "24", "process_user_time": 1.029306}
+[0m17:35:23.477458 [debug] [MainThread]: Command `dbt debug` failed at 17:35:23.477385 after 1.90 seconds
+[0m17:35:23.477755 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:35:23.478053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f073c78c250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f073a82a4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0739e2ca00>]}
+[0m17:35:23.478387 [debug] [MainThread]: Flushing usage events
+[0m17:35:24.118912 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:46:54.674265 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc68278280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc674193c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc67419360>]}
+
+
+============================== 17:46:54.677429 | 1ebd4980-7242-49dc-ba5a-8a26816f376f ==============================
+[0m17:46:54.677429 [info ] [MainThread]: Running with dbt=1.9.4
+[0m17:46:54.677883 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:46:54.682423 [info ] [MainThread]: dbt version: 1.9.4
+[0m17:46:54.682703 [info ] [MainThread]: python version: 3.10.17
+[0m17:46:54.682938 [info ] [MainThread]: python path: /home/andermartinez/.conda/envs/schema_evolution_vulcan/bin/python3.10
+[0m17:46:54.683174 [info ] [MainThread]: os info: Linux-6.13.12-200.fc41.x86_64-x86_64-with-glibc2.40
+[0m17:46:54.873803 [info ] [MainThread]: Using profiles dir at /home/andermartinez/.dbt
+[0m17:46:54.874227 [info ] [MainThread]: Using profiles.yml file at /home/andermartinez/.dbt/profiles.yml
+[0m17:46:54.874490 [info ] [MainThread]: Using dbt_project.yml file at /home/andermartinez/Projects/samples/spark_iceberg_schema_evolution_vulcansql/dbt_project.yml
+[0m17:46:54.874818 [info ] [MainThread]: adapter type: athena
+[0m17:46:54.875050 [info ] [MainThread]: adapter version: 1.9.3
+[0m17:46:54.875291 [info ] [MainThread]: Configuration:
+[0m17:46:54.875499 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:46:54.875698 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m17:46:54.875896 [info ] [MainThread]: Required dependencies:
+[0m17:46:54.876112 [debug] [MainThread]: Executing "git --help"
+[0m17:46:54.878668 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:46:54.879483 [debug] [MainThread]: STDERR: "b''"
+[0m17:46:54.880045 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:46:54.880606 [info ] [MainThread]: Connection:
+[0m17:46:54.881145 [info ] [MainThread]:   s3_staging_dir: s3://bd-datawarehouse/customers_db/dbt/results/
+[0m17:46:54.881676 [info ] [MainThread]:   work_group: None
+[0m17:46:54.882150 [info ] [MainThread]:   skip_workgroup_check: False
+[0m17:46:54.882505 [info ] [MainThread]:   region_name: eu-west-1
+[0m17:46:54.882699 [info ] [MainThread]:   database: 216989113396
+[0m17:46:54.882891 [info ] [MainThread]:   schema: dev
+[0m17:46:54.883094 [info ] [MainThread]:   poll_interval: 1.0
+[0m17:46:54.883281 [info ] [MainThread]:   aws_profile_name: None
+[0m17:46:54.883466 [info ] [MainThread]:   aws_access_key_id: None
+[0m17:46:54.883659 [info ] [MainThread]:   endpoint_url: None
+[0m17:46:54.883843 [info ] [MainThread]:   s3_data_dir: s3://bd-datawarehouse/customers_db/dbt/data/
+[0m17:46:54.884034 [info ] [MainThread]:   s3_data_naming: schema_table_unique
+[0m17:46:54.884225 [info ] [MainThread]:   s3_tmp_table_dir: None
+[0m17:46:54.884413 [info ] [MainThread]:   debug_query_state: False
+[0m17:46:54.884599 [info ] [MainThread]:   seed_s3_upload_args: None
+[0m17:46:54.884783 [info ] [MainThread]:   lf_tags_database: None
+[0m17:46:54.884972 [info ] [MainThread]:   spark_work_group: None
+[0m17:46:54.885254 [info ] [MainThread]: Registered adapter: athena=1.9.3
+[0m17:46:54.929729 [debug] [MainThread]: Acquiring new athena connection 'debug'
+[0m17:46:54.930211 [debug] [MainThread]: Using athena connection "debug"
+[0m17:46:54.930464 [debug] [MainThread]: On debug: select 1 as id
+[0m17:46:54.930682 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:46:55.193601 [debug] [MainThread]: dbt.adapters.athena.constants adapter: Athena query ID 2962a2ba-a18b-43a9-9c6e-b92cf8251be5
+[0m17:46:56.512954 [debug] [MainThread]: SQL status: OK -1 in 1.582 seconds
+[0m17:46:56.514753 [debug] [MainThread]: On debug: Close
+[0m17:46:56.515401 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:46:56.515882 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:46:56.516328 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/andermartinez/Projects/samples/spark_iceberg_schema_evolution_vulcansql/dbt_project.yml> not found
+
+[0m17:46:56.517371 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 1.8785744, "process_in_blocks": "0", "process_kernel_time": 0.078542, "process_mem_max_rss": "137920", "process_out_blocks": "32", "process_user_time": 1.019277}
+[0m17:46:56.517816 [debug] [MainThread]: Command `dbt debug` failed at 17:46:56.517742 after 1.88 seconds
+[0m17:46:56.518133 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:46:56.518434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc68278280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc66316500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7efc65918a30>]}
+[0m17:46:56.518711 [debug] [MainThread]: Flushing usage events
+[0m17:46:56.921132 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:49:49.119761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5122974250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5121b11630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5121b115d0>]}
+
+
+============================== 09:49:49.123321 | e6e05310-4b79-47ae-abda-eeebdd1b7141 ==============================
+[0m09:49:49.123321 [info ] [MainThread]: Running with dbt=1.9.4
+[0m09:49:49.123875 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/andermartinez/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt build', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:49:49.124395 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/andermartinez/Projects/samples/spark_iceberg_schema_evolution_vulcansql/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:49:49.125377 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 0.042520113, "process_in_blocks": "0", "process_kernel_time": 0.036745, "process_mem_max_rss": "92760", "process_out_blocks": "16", "process_user_time": 0.728463}
+[0m09:49:49.125838 [debug] [MainThread]: Command `dbt build` failed at 09:49:49.125730 after 0.04 seconds
+[0m09:49:49.126188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5122974250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5121b11cf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5121b11630>]}
+[0m09:49:49.126541 [debug] [MainThread]: Flushing usage events
+[0m09:49:49.887837 [debug] [MainThread]: An error was encountered while trying to flush usage events

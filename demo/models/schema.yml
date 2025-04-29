@@ -1,0 +1,73 @@
+version: 2
+
+sources:
+  - name: customers_db
+    database: AwsDataCatalog
+    schema: customers_db
+    tables:
+      - name: customers_table
+        identifier: customers_table
+
+models:
+  - name: customers_bronze
+    description: "Bronze layer for customers data"
+    config:
+      materialized: table
+      table_type: iceberg
+      partitioned_by:
+        - month(created_at)
+    columns:
+      - name: customer_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      - name: subscription_date
+        tests:
+          - not_null
+      - name: index
+        tests:
+          - unique:
+              config:
+                severity: warn
+          - not_null
+    tests:
+      - schema_evolution
+
+  - name: customers_silver
+    description: "Silver layer for customers data"
+    config:
+      materialized: table
+      table_type: iceberg
+      partitioned_by:
+        - month(created_at)
+    columns:
+      - name: customer_id
+        tests:
+          - unique:
+              config:
+                severity: error
+          - not_null
+      - name: first_name
+        tests:
+          - not_null
+      - name: last_name
+        tests:
+          - not_null
+      # - name: first_name
+      #   tests:
+      #     - not_null
+      # - name: last_name
+      #   tests:
+      #     - not_null:
+      #       config:
+      #           severity: warn
+    # tests:
+    #   - schema_evolution 

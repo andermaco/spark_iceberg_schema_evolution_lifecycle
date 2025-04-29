@@ -1,0 +1,15 @@
+demo:
+  outputs:
+    dev:
+      type: athena
+      s3_staging_dir: s3://bd-datawarehouse/customers_db/customers_table/dbt/
+      s3_data_dir: s3://bd-datawarehouse/customers_db/customers_table/data/
+      #s3_data_naming: [table_unique] # the type of naming convention used when writing to S3
+      region_name: eu-west-1
+      schema: customers_db
+      database: AwsDataCatalog
+      aws_profile_name: default
+      threads: 1
+      num_retries: 1 # number of retries performed by the adapter. Defaults to 5
+      work_group: primary
+  target: dev
